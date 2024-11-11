@@ -9,4 +9,12 @@ export default defineConfig({
       '@': '/src',
     },
   },
+  base: "/",
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:5000",
+      },
+    },
+  }
 })
