@@ -1,0 +1,21 @@
+{
+  "name": "major",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ashish Vaidya <ashuvaidya2003@gmail.com>",
+  "scripts": {
+    "frontend": "cd frontend && yarn",
+    "backend": "cd backend && yarn",
+    "deploy": "concurrently \"yarn run frontend\" \"yarn run backend\"",
+    "deploy-frontend": "cd frontend && yarn run build",
+    "deploy-backend": "cd backend && yarn run build",
+    "dev": "concurrently \"yarn run frontend\" \"yarn run backend\"",
+    "install": "concurrently \"yarn run frontend\" \"yarn run backend\"",
+    "ifrontend": "cd frontend && yarn",
+    "ibackend": "cd backend && yarn"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "9.1.0"
+  }
+}
