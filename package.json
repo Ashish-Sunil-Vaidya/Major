@@ -6,11 +6,10 @@
   "scripts": {
     "frontend": "cd frontend && yarn",
     "backend": "cd backend && yarn",
-    "deploy": "concurrently \"yarn frontend build\" \"yarn backend start\"",
-    "deploy-frontend": "cd frontend && vite build",
-    "deploy-backend": "cd backend && yarn run build",
-    "dev": "concurrently \"yarn run frontend\" \"yarn run backend\"",
-    "install": "concurrently \"yarn run frontend\" \"yarn run backend\""
+    "dev": "concurrently \"yarn backend dev\" \"yarn frontend dev\"",
+    "install": "concurrently \"yarn backend\" \"yarn frontend && yarn frontend build\"",
+    "start": "yarn backend start",
+    "server": "nodemon backend/index.js"
   },
   "license": "MIT",
   "dependencies": {
