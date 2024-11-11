@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+
 import Navabar from "./Navbar";
 
 const Layout = ({children}) =>{
@@ -8,10 +8,6 @@ const Layout = ({children}) =>{
             {children}
         </>
     )
-}
-
-Layout.propTypes = {
-    children: PropTypes.node.isRequired
 }
 
 
