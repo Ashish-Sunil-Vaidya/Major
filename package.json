@@ -7,12 +7,10 @@
     "frontend": "cd frontend && yarn",
     "backend": "cd backend && yarn",
     "deploy": "concurrently \"yarn run frontend\" \"yarn run backend\"",
-    "deploy-frontend": "cd frontend && yarn run build",
+    "deploy-frontend": "cd frontend && vite build",
     "deploy-backend": "cd backend && yarn run build",
     "dev": "concurrently \"yarn run frontend\" \"yarn run backend\"",
-    "install": "concurrently \"yarn run frontend\" \"yarn run backend\"",
-    "ifrontend": "cd frontend && yarn",
-    "ibackend": "cd backend && yarn"
+    "install": "concurrently \"yarn run frontend\" \"yarn run backend\""
   },
   "license": "MIT",
   "dependencies": {
