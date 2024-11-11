@@ -1,5 +1,6 @@
 import { Box, VStack, Image, Heading, Text, Button, HStack, Card, Stack, For,Input,Textarea, Flex } from "@chakra-ui/react";
 import { FaClipboard, FaBook, FaWrench, FaUsers } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
     return (
@@ -53,7 +54,7 @@ const Hero = () => {
                         colorPalette="blue"
                         size="2xl"
                         rounded="none"
-                        shadow="sm"
+
                     >
                         Find Out More
                     </Button>
@@ -62,7 +63,8 @@ const Hero = () => {
                         colorPalette="teal"
                         size="2xl"
                         rounded="none"
-                        shadow="sm"
+                        as={Link}
+                        to="/login"
                     >
                         Login
                     </Button>
@@ -103,7 +105,7 @@ const AlumiBenifits = () => {
                 Alumni Benefits
             </Heading>
 
-            <Text color="GrayText" fontSize={{ base: "xl", md: "2xl" }}>
+            <Text w="90%" color="GrayText" textAlign="center" fontSize={{ base: "xl", md: "2xl" }}>
                 As a member of the global BZU alumni network, you have access to a variety of exclusive services and benefits.
             </Text>
 

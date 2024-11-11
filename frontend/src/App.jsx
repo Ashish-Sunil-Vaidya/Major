@@ -1,11 +1,16 @@
-import Layout from "./components/Layout"
 import { Outlet } from "react-router-dom";
+import Layout from "./components/Layout";
+
+import { Theme } from "@chakra-ui/react";
+import  useGlobalTheme  from "./hooks/globalTheme";
 
 function App() {
-return (
-    <Layout>
+  const { theme } = useGlobalTheme();
+
+  return (
+    <Theme appearance={theme}><Layout>
       <Outlet />
-    </Layout>
+    </Layout></Theme>
   )
 }
 
