@@ -15,8 +15,15 @@ const Navbar = () => {
     const activeButton = buttons.find((button) => location.pathname === button.path);
 
     return (
-        <Box  display="flex" justifyContent="center" mt={3} pos="fixed" top={0} width="full" zIndex={4}>
-            <HStack bg="Background" shadow="md" w="fit" p={3}>
+        <Box  display="flex" justifyContent={{
+            base: 'flex-start',
+            md: 'center',
+        }} mt={{
+            base: '0',
+            md: 3,
+
+        }} pos="fixed"  width="full" zIndex={4} overflowX="auto">
+            <HStack bg="Background" shadow="sm" w="fit" p={3}>
                 {buttons.map((button) => (
                     <Button
                         key={button.name}

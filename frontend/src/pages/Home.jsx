@@ -43,7 +43,7 @@ const Hero = () => {
                     Welcome to Comprehensive Alumni Association Network Project
                 </Heading>
 
-                <Text fontSize="lg" fontWeight="medium">
+                <Text fontSize="lg" fontWeight="medium" w="90%">
                     Connecting Computer Science Alumni Across The Globe
                 </Text>
 
@@ -98,7 +98,7 @@ const AlumiBenifits = () => {
     ];
 
     return (
-        <VStack as="section" gap={20} py={10} bg="gray.50" w="full" h="90svh" justify="center">
+        <VStack as="section" gap={20} py={10}  w="full" minh="90svh" justify="center">
             <Heading textAlign="center" fontSize={{ base: "2xl", md: "4xl" }} >
                 Alumni Benefits
             </Heading>
@@ -166,7 +166,13 @@ const UpcomingEvents = () => {
     ];
 
     return (
-        <VStack as="section" bg="gray.50" py={10} w="full" h="90svh" justify="center" >
+        <VStack as="section"  py={10} w={{
+            base: "90%",
+            md: "full"
+        }} minh="90svh" justify="center" mx={{
+            base: "auto",
+            md: "0"
+        }} >
             <Heading textAlign="center" fontSize={{ base: "2xl", md: "4xl" }} >
                 Upcoming Events
             </Heading>
@@ -193,13 +199,16 @@ const UpcomingEvents = () => {
 
 const Contacts = () => {
     return (
-        <VStack as="section" bg="gray.50" py={10} w="full" h="90svh" gap={10} justify="center">
+        <VStack as="section"  py={10} w="full" minh="90svh" gap={10} justify="center">
             <Heading textAlign="center" fontSize={{ base: "2xl", md: "4xl" }}>
                 Contact Us
             </Heading>
 
-            <Card.Root rounded="none" h="600px" variant="outline" p={8} w="90%">
-                <Card.Body display="grid" gridTemplateColumns="repeat(2,1fr)">
+            <Card.Root rounded="none" h="600px" variant="outline" p={{
+                base: 0,
+                md: 8
+            }} w="90%">
+                <Card.Body display="grid" gridTemplateColumns={{base:"",md:"repeat(2,1fr)"}}>
                     <Image
                         src="https://via.placeholder.com/600x400" // Replace with your image URL
                         alt="Contact Us"
@@ -208,6 +217,7 @@ const Contacts = () => {
                         w="50%"
                         h="100%"
                         rounded="none"
+                        display={{ base: "none", md: "block" }}
                     />
                     <VStack spacing={4} h="full">
                         <Input placeholder="Name" size="lg" rounded="none" />
