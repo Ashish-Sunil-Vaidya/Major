@@ -189,20 +189,12 @@ const Register = () => {
                     <Button width="full" mt={4} >
                         Verify Email
                     </Button>
-                    <Text fontSize="md">
-                        Already have an account?{" "}
-                        <Button variant="link" as={NLink} to="/login" width="fit-content" fontSize="lg" fontWeight="bold" >
-                            Login here!
-                        </Button>
-                    </Text>
-                </Stack>
-                <Box mt={5} display={{
-                    base: "block",
-                    md: "none"
-                }} textAlign="center">
+                    <Box mt={5}  textAlign="center">
                     Already have an account?
                     <Button fontSize="lg" variant="ghost" as={NLink} to="/login"  >Login here!</Button>
                 </Box>
+                </Stack>
+
             </Box>
 
         </Box>
