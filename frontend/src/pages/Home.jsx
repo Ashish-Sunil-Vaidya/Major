@@ -1,17 +1,18 @@
 import { Box, VStack, Image, Heading, Text, Button, HStack, Card, Stack, For,Input,Textarea, Flex } from "@chakra-ui/react";
 import { FaClipboard, FaBook, FaWrench, FaUsers } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo-main.png";
 
 const Hero = () => {
     return (
         <Box
             as="section"
-            height="100vh"
+            minH="100vh"
             backgroundImage="url('/path-to-background-image.jpg')" // Replace with your image path
             backgroundSize="cover"
             backgroundPosition="center"
             position="relative"
-            bg="gray.emphasized"
+            // bg="gray.emphasized"
         >
             {/* Overlay */}
             <Box
@@ -30,17 +31,19 @@ const Hero = () => {
                 color="white"
                 textAlign="center"
                 justify="center"
-                height="100%"
-                gap={6}
+
+                // gap={6}
             >
                 <Image
-                    src="/path-to-logo.png" // Replace with your logo path
+                mt={10}
+                    src={logo}
                     alt="University Logo"
-                    boxSize="100px"
+                    w="400px"
                     objectFit="contain"
+
                 />
 
-                <Heading lineHeight="50px" w="80%" fontSize={{ base: "3xl", md: "5xl" }} fontWeight="bold">
+                <Heading color="CaptionText" lineHeight="50px" w="80%" fontSize={{ base: "3xl", md: "5xl" }} fontWeight="bold">
                     Welcome to Comprehensive Alumni Association Network Project
                 </Heading>
 

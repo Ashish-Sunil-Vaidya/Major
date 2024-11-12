@@ -5,6 +5,7 @@ import { Home, Login, Register } from './pages'
 import App from './App.jsx'
 import { Provider } from "@/components/ui/provider"
 import GlobalThemeProvider from './context/GlobalThemeProvider.jsx'
+import { Theme } from '@chakra-ui/react'
 
 
 const router = createBrowserRouter([{
@@ -20,11 +21,11 @@ const router = createBrowserRouter([{
 },
 {
   path: 'login',
-  element: <Login />,
+  element: <Theme><Login /></Theme>,
 },
 {
   path: 'register',
-  element: <Register />,
+  element: <Theme><Register /></Theme>,
 }
 ]);
 
